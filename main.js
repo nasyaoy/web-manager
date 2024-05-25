@@ -3,6 +3,10 @@ const inputName = document.getElementById('name');
 const inputPrice = document.getElementById('price');
 const selectCategory = document.getElementById('selectCategory');
 const purcasheList = document.getElementById('tbody');
+let legendList = document.querySelectorAll('.legend__item');
+let unitsList = document.querySelectorAll('.unit');
+let legendPrice = document.querySelectorAll('.legend__price');
+
 
 bnt.addEventListener('click', (e) => {
     e.preventDefault();
@@ -32,10 +36,19 @@ bnt.addEventListener('click', (e) => {
     inputPrice.value = ' ';
 
     const delBtn = document.createElement('button');
-    delBtn.textContent = '×';
+    delBtn.textContent = '✖️';
+    delBtn.classList.add('delBtn');
     newLine.appendChild(delBtn);
 
     delBtn.addEventListener('click', () => {
         purcasheList.removeChild(newLine);
     });
+
+    //  диаграмма
+    
 })
+
+
+
+
+ 
